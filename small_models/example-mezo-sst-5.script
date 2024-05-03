@@ -1,0 +1,6 @@
+#!/bin/sh -l
+#SBATCH --nodes=1
+#SBATCH --time=10:00:00
+#SBATCH --job-name=test_nlp
+cd /common/home/zl606/MeZO/medium_models
+singularity run --nv /common/system/nvidia-containers/pytorch:23.12-py3.sif bash mezo-sst-5.sh

@@ -1,0 +1,464 @@
+/var/spool/slurmd/job37618/slurm_script: 4: [: 1: unexpected operator
+
+Ubuntu 22.04.3 LTS5.15.0-78-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab5.cs          IP No:     128.6.13.25 2620:0:d60:ac0d::19
+Mon Apr 29 01:45:56 AM EDT 2024	  Uptime:        	      108 days 08:09
+----------------------------------------------------------------------------
+Processes:     	892               Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	0/0/0
+Connections:   	5                 Load/Total Users:	30/0
+Free Memory:   	521Gi of 1.0Ti    Free Swap:     	990Gi of 990Gi
+----------------------------------------------------------------------------
+CPU Info:      	Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz - 80 cores 
+System CPU:    	5.14%             User CPU:      	45.58%
+CPU Idle:      	49.25%            IO Wait:       	0.03%
+----------------------------------------------------------------------------
+Login as:      	zl606             No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	1818.53 GB
+CUDA Driver:   	11.8              CUDA Cores:    	3072
+----------------------------------------------------------------------------
+
+13:4: not a valid test operator: (
+13:4: not a valid test operator: 525.125.06
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 23.12 (build 76438008)
+PyTorch Version 2.2.0a0+81ea7a4
+
+Container image Copyright (c) 2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+Copyright (c) 2014-2023 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 12.3 driver version 545.23.08 with kernel driver version 525.125.06.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+TASK: trec
+K: 16
+Seed: 42
+BS: 8
+LR: 1e-5
+Step: 1000; Eval step: 100
+Grid search tag: seed42-bs8-lr1e-5-step1000-evalstep100
+Tag: k16-roberta-base-ft
+04/29/2024 01:46:04 - WARNING - __main__ -   Process rank: -1, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+04/29/2024 01:46:04 - INFO - __main__ -   Training/evaluation parameters DynamicTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+adjust_for_init=False,
+array_id=-1,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+binary_classification=False,
+change_grad_estimate=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+efficient_zero_order=False,
+efficient_zero_order_fp16=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=100,
+evaluate_during_training=True,
+evaluation_strategy=no,
+exclude_embeddings=False,
+exclude_first_layers=-1,
+exclude_head=False,
+f0_scaling=1.0,
+fix_layers=0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+from_linearhead=False,
+fsdp=[],
+fsdp_config={'fsdp_min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+head_tuning=False,
+hf_inference_model=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+jit_mode_eval=False,
+kernel_formula=sgd,
+kernel_gamma=1.0,
+kernel_regularization=0.0,
+kernel_solver=logistic,
+label_names=None,
+label_smoothing_factor=0.0,
+layer_wise_optim=False,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+load_kernels=None,
+local_rank=-1,
+log_file=log,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=result/trec-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42/runs/Apr29_01-46-04_rlab5.cs.rutgers.edu,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lp_early_stopping=False,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=1000,
+max_zo_forward_steps=0,
+mc_tol=0.1,
+metric_for_best_model=None,
+model_id=-1,
+mp_parameters=,
+no_cuda=False,
+no_predict=False,
+no_reparam=False,
+no_train=False,
+norm_running_update=False,
+num_hvp_vecs=128,
+num_prefix=10,
+num_train_epochs=3.0,
+only_biases=False,
+optim=adamw_hf,
+optim_args=None,
+optimize_acc=False,
+optimizer=adam,
+optimizer_variant=,
+output_dir=result/trec-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42,
+overwrite_kernels=False,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=4,
+per_device_train_batch_size=8,
+prediction_loss_only=False,
+prefix_init_by_real_act=False,
+prefix_tuning=False,
+prob_as_feature=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+random_model_init=False,
+ray_scope=last,
+recompute_norms=False,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=result/trec-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42,
+save_at_last=False,
+save_logit=False,
+save_logit_dir=None,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+scale_lr_with_samples=False,
+scale_norm_by_num_params=False,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sweep=False,
+sync_embedding_layers=False,
+tf32=None,
+tie_emb=False,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trainer=standard,
+untie_emb=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+use_zo_grad_est=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+zero_order_clip_grad=False,
+zero_order_eps=0.001,
+zero_order_optim=False,
+zero_order_sample=1,
+zero_order_sample_scheduler=None,
+zero_order_use_trainer_optim=False,
+zo_by_layer=False,
+zo_variant=None,
+)
+04/29/2024 01:46:04 - INFO - __main__ -   Task name: trec, number of labels: 6, output mode: classification
+04/29/2024 01:46:05 - WARNING - src.models -   By default for RoBERTa models the input embeddings and the output embeddings are NOT tied!!!!
+Some weights of RobertaModelForPromptFinetuning were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier.weight', 'roberta.embeddings.position_ids', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 0 to word ĠDescription (33425)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 1 to word ĠEntity (46718)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 2 to word ĠExpression (43819)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 3 to word ĠHuman (3861)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 4 to word ĠLocation (16287)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 5 to word ĠNumber (12270)
+04/29/2024 01:46:07 - INFO - src.dataset -   Total num_sample for mode train: 1
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/trec/16-42/cached_train_RobertaTokenizerFast-roberta_128_trec [took 0.004 s]
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 0 to word ĠDescription (33425)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 1 to word ĠEntity (46718)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 2 to word ĠExpression (43819)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 3 to word ĠHuman (3861)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 4 to word ĠLocation (16287)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 5 to word ĠNumber (12270)
+04/29/2024 01:46:07 - INFO - src.dataset -   Total num_sample for mode dev: 1
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/trec/16-42/cached_dev_RobertaTokenizerFast-roberta_128_trec [took 0.004 s]
+04/29/2024 01:46:07 - INFO - src.dataset -   *** Example ***
+04/29/2024 01:46:07 - INFO - src.dataset -   guid: dev-0
+04/29/2024 01:46:07 - INFO - src.dataset -   features: OurInputFeatures(input_ids=[0, 50264, 35, 653, 247, 7562, 5, 144, 643, 17487, 2], attention_mask=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], token_type_ids=None, label=4, mask_pos=[1], label_word_list=None, sfc_input_ids=None, sfc_attention_mask=None, sfc_mask_pos=None)
+04/29/2024 01:46:07 - INFO - src.dataset -   text: <s><mask>: What country borders the most others?</s>
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 0 to word ĠDescription (33425)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 1 to word ĠEntity (46718)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 2 to word ĠExpression (43819)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 3 to word ĠHuman (3861)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 4 to word ĠLocation (16287)
+04/29/2024 01:46:07 - INFO - src.dataset -   Label 5 to word ĠNumber (12270)
+04/29/2024 01:46:07 - INFO - src.dataset -   Total num_sample for mode test: 1
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/trec/16-42
+04/29/2024 01:46:07 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/trec/16-42/cached_test_RobertaTokenizerFast-roberta_128_trec [took 0.005 s]
+04/29/2024 01:46:07 - INFO - src.dataset -   *** Example ***
+04/29/2024 01:46:07 - INFO - src.dataset -   guid: test-0
+04/29/2024 01:46:07 - INFO - src.dataset -   features: OurInputFeatures(input_ids=[0, 50264, 35, 1336, 444, 16, 24, 31, 4465, 7, 287, 9675, 17487, 2], attention_mask=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], token_type_ids=None, label=5, mask_pos=[1], label_word_list=None, sfc_input_ids=None, sfc_attention_mask=None, sfc_mask_pos=None)
+04/29/2024 01:46:07 - INFO - src.dataset -   text: <s><mask>: How far is it from Denver to Aspen?</s>
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+04/29/2024 01:46:09 - INFO - src.trainer_ours -   ***** Running training *****
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Num examples = 96
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Num Epochs = 84
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Instantaneous batch size per device = 8
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Total train batch size (w. parallel, distributed & accumulation) = 8
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Gradient Accumulation steps = 1
+04/29/2024 01:46:09 - INFO - src.trainer_ours -     Total optimization steps = 1000
+You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+04/29/2024 01:46:11 - INFO - src.trainer_ours -   {'loss': 2.109927749633789, 'norm': 131.0150909423828, 'learning_rate': 9.9e-06}
+04/29/2024 01:46:12 - INFO - src.trainer_ours -   {'loss': 1.4935798645019531, 'norm': 96.90031433105469, 'learning_rate': 9.800000000000001e-06}
+04/29/2024 01:46:13 - INFO - src.trainer_ours -   {'loss': 1.0200305938720704, 'norm': 71.58949279785156, 'learning_rate': 9.7e-06}
+04/29/2024 01:46:14 - INFO - src.trainer_ours -   {'loss': 0.6983554840087891, 'norm': 80.90115356445312, 'learning_rate': 9.600000000000001e-06}
+04/29/2024 01:46:15 - INFO - src.trainer_ours -   {'loss': 0.37843780517578124, 'norm': 56.68832015991211, 'learning_rate': 9.5e-06}
+04/29/2024 01:46:16 - INFO - src.trainer_ours -   {'loss': 0.31438369750976564, 'norm': 44.7309455871582, 'learning_rate': 9.4e-06}
+04/29/2024 01:46:17 - INFO - src.trainer_ours -   {'loss': 0.18005409240722656, 'norm': 54.832061767578125, 'learning_rate': 9.3e-06}
+04/29/2024 01:46:18 - INFO - src.trainer_ours -   {'loss': 0.03699836730957031, 'norm': 8.908369064331055, 'learning_rate': 9.200000000000002e-06}
+04/29/2024 01:46:19 - INFO - src.trainer_ours -   {'loss': 0.028017425537109376, 'norm': 1.5274070501327515, 'learning_rate': 9.100000000000001e-06}
+04/29/2024 01:46:20 - INFO - src.trainer_ours -   {'loss': 0.010671615600585938, 'norm': 0.9273459315299988, 'learning_rate': 9e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+RobertaConfig {
+  "_name_or_path": "roberta-base",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "finetuning_task": "trec",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3,
+    "LABEL_4": 4,
+    "LABEL_5": 5
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.28.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+  0%|          | 0/24 [00:00<?, ?it/s] 29%|██▉       | 7/24 [00:00<00:00, 67.94it/s] 62%|██████▎   | 15/24 [00:00<00:00, 74.29it/s] 96%|█████████▌| 23/24 [00:00<00:00, 75.73it/s]04/29/2024 01:46:20 - INFO - src.trainer_ours -   {'eval_loss': 0.933296263217926, 'eval_acc': 0.7604166666666666}
+04/29/2024 01:46:20 - INFO - src.trainer_ours -   Best dev result: 0.7604166666666666
+04/29/2024 01:46:22 - INFO - src.trainer_ours -   {'loss': 0.007428359985351562, 'norm': 2.161135673522949, 'learning_rate': 8.900000000000001e-06}
+04/29/2024 01:46:23 - INFO - src.trainer_ours -   {'loss': 0.0006572723388671875, 'norm': 0.5940943956375122, 'learning_rate': 8.8e-06}
+04/29/2024 01:46:24 - INFO - src.trainer_ours -   {'loss': 0.0005313873291015625, 'norm': 0.061293356120586395, 'learning_rate': 8.700000000000001e-06}
+04/29/2024 01:46:25 - INFO - src.trainer_ours -   {'loss': 0.000301361083984375, 'norm': 0.01048285048455, 'learning_rate': 8.6e-06}
+04/29/2024 01:46:26 - INFO - src.trainer_ours -   {'loss': 0.0004749298095703125, 'norm': 1.9961662292480469, 'learning_rate': 8.5e-06}
+04/29/2024 01:46:26 - INFO - src.trainer_ours -   {'loss': 0.000144195556640625, 'norm': 0.014522185549139977, 'learning_rate': 8.400000000000001e-06}
+04/29/2024 01:46:27 - INFO - src.trainer_ours -   {'loss': 0.000632476806640625, 'norm': 0.03368702530860901, 'learning_rate': 8.3e-06}
+04/29/2024 01:46:28 - INFO - src.trainer_ours -   {'loss': 0.000301361083984375, 'norm': 0.026880508288741112, 'learning_rate': 8.2e-06}
+04/29/2024 01:46:29 - INFO - src.trainer_ours -   {'loss': 0.000179290771484375, 'norm': 1.2604949474334717, 'learning_rate': 8.1e-06}
+04/29/2024 01:46:30 - INFO - src.trainer_ours -   {'loss': 2.09808349609375e-05, 'norm': 0.05941236764192581, 'learning_rate': 8.000000000000001e-06}
+31it [00:10,  1.97it/s]                        38it [00:10,  2.92it/s]45it [00:10,  4.22it/s]04/29/2024 01:46:31 - INFO - src.trainer_ours -   {'eval_loss': 1.0763434171676636, 'eval_acc': 0.8125}
+04/29/2024 01:46:31 - INFO - src.trainer_ours -   Best dev result: 0.8125
+04/29/2024 01:46:32 - INFO - src.trainer_ours -   {'loss': 2.3651123046875e-05, 'norm': 0.0037118925247341394, 'learning_rate': 7.9e-06}
+04/29/2024 01:46:33 - INFO - src.trainer_ours -   {'loss': 0.0013912200927734375, 'norm': 0.006940454710274935, 'learning_rate': 7.800000000000002e-06}
+04/29/2024 01:46:34 - INFO - src.trainer_ours -   {'loss': 8.65936279296875e-05, 'norm': 0.009358664974570274, 'learning_rate': 7.7e-06}
+04/29/2024 01:46:35 - INFO - src.trainer_ours -   {'loss': 2.593994140625e-05, 'norm': 0.003560357028618455, 'learning_rate': 7.600000000000001e-06}
+04/29/2024 01:46:36 - INFO - src.trainer_ours -   {'loss': 9.65118408203125e-05, 'norm': 0.043401483446359634, 'learning_rate': 7.500000000000001e-06}
+04/29/2024 01:46:37 - INFO - src.trainer_ours -   {'loss': 0.0001461029052734375, 'norm': 0.0063545494340360165, 'learning_rate': 7.4e-06}
+04/29/2024 01:46:38 - INFO - src.trainer_ours -   {'loss': 0.00030364990234375, 'norm': 0.001401953981257975, 'learning_rate': 7.3e-06}
+04/29/2024 01:46:39 - INFO - src.trainer_ours -   {'loss': 0.0003551483154296875, 'norm': 1.6045122146606445, 'learning_rate': 7.2000000000000005e-06}
+04/29/2024 01:46:40 - INFO - src.trainer_ours -   {'loss': 0.0001556396484375, 'norm': 0.013535387814044952, 'learning_rate': 7.100000000000001e-06}
+04/29/2024 01:46:41 - INFO - src.trainer_ours -   {'loss': 0.00022430419921875, 'norm': 0.002855005208402872, 'learning_rate': 7e-06}
+51it [00:21,  1.46it/s]55it [00:21,  1.84it/s]61it [00:21,  2.63it/s]71it [00:21,  4.49it/s]04/29/2024 01:46:42 - INFO - src.trainer_ours -   {'eval_loss': 1.0013693571090698, 'eval_acc': 0.7916666666666666}
+04/29/2024 01:46:43 - INFO - src.trainer_ours -   {'loss': 5.83648681640625e-05, 'norm': 0.0011019841767847538, 'learning_rate': 6.9e-06}
+04/29/2024 01:46:44 - INFO - src.trainer_ours -   {'loss': 5.035400390625e-05, 'norm': 0.0011561899445950985, 'learning_rate': 6.800000000000001e-06}
+04/29/2024 01:46:45 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-05, 'norm': 0.0020965037401765585, 'learning_rate': 6.700000000000001e-06}
+04/29/2024 01:46:46 - INFO - src.trainer_ours -   {'loss': 5.340576171875e-05, 'norm': 0.0018824887229129672, 'learning_rate': 6.600000000000001e-06}
+04/29/2024 01:46:46 - INFO - src.trainer_ours -   {'loss': 1.2969970703125e-05, 'norm': 0.021763518452644348, 'learning_rate': 6.5000000000000004e-06}
+04/29/2024 01:46:47 - INFO - src.trainer_ours -   {'loss': 2.593994140625e-05, 'norm': 0.03327947109937668, 'learning_rate': 6.4000000000000006e-06}
+04/29/2024 01:46:48 - INFO - src.trainer_ours -   {'loss': 7.2479248046875e-06, 'norm': 0.0006475260597653687, 'learning_rate': 6.300000000000001e-06}
+04/29/2024 01:46:49 - INFO - src.trainer_ours -   {'loss': 0.0006847381591796875, 'norm': 0.027201328426599503, 'learning_rate': 6.200000000000001e-06}
+04/29/2024 01:46:50 - INFO - src.trainer_ours -   {'loss': 0.000151824951171875, 'norm': 0.017221227288246155, 'learning_rate': 6.1e-06}
+04/29/2024 01:46:51 - INFO - src.trainer_ours -   {'loss': 1.56402587890625e-05, 'norm': 0.0006959823658689857, 'learning_rate': 6e-06}
+78it [00:30,  1.82it/s]87it [00:31,  2.78it/s]04/29/2024 01:46:51 - INFO - src.trainer_ours -   {'eval_loss': 1.1312490701675415, 'eval_acc': 0.8020833333333334}
+04/29/2024 01:46:52 - INFO - src.trainer_ours -   {'loss': 1.56402587890625e-05, 'norm': 0.004275462124496698, 'learning_rate': 5.9e-06}
+04/29/2024 01:46:53 - INFO - src.trainer_ours -   {'loss': 2.02178955078125e-05, 'norm': 0.0013320526340976357, 'learning_rate': 5.8e-06}
+04/29/2024 01:46:54 - INFO - src.trainer_ours -   {'loss': 7.2479248046875e-06, 'norm': 0.008535871282219887, 'learning_rate': 5.7e-06}
+04/29/2024 01:46:55 - INFO - src.trainer_ours -   {'loss': 8.65936279296875e-05, 'norm': 0.00165464635938406, 'learning_rate': 5.600000000000001e-06}
+04/29/2024 01:46:56 - INFO - src.trainer_ours -   {'loss': 6.4849853515625e-06, 'norm': 0.010981261730194092, 'learning_rate': 5.500000000000001e-06}
+04/29/2024 01:46:56 - INFO - src.trainer_ours -   {'loss': 1.6021728515625e-05, 'norm': 0.18398332595825195, 'learning_rate': 5.400000000000001e-06}
+04/29/2024 01:46:57 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-05, 'norm': 0.11090550571680069, 'learning_rate': 5.300000000000001e-06}
+04/29/2024 01:46:58 - INFO - src.trainer_ours -   {'loss': 6.866455078125e-06, 'norm': 0.0048209670931100845, 'learning_rate': 5.2e-06}
+04/29/2024 01:46:59 - INFO - src.trainer_ours -   {'loss': 1.18255615234375e-05, 'norm': 0.001618758193217218, 'learning_rate': 5.1e-06}
+04/29/2024 01:47:00 - INFO - src.trainer_ours -   {'loss': 1.8310546875e-05, 'norm': 0.0005786778056062758, 'learning_rate': 5e-06}
+97it [00:39,  1.82it/s]102it [00:39,  2.27it/s]107it [00:40,  2.89it/s]113it [00:40,  3.93it/s]118it [00:40,  4.99it/s]04/29/2024 01:47:01 - INFO - src.trainer_ours -   {'eval_loss': 1.0752992630004883, 'eval_acc': 0.8229166666666666}
+04/29/2024 01:47:01 - INFO - src.trainer_ours -   Best dev result: 0.8229166666666666
+04/29/2024 01:47:02 - INFO - src.trainer_ours -   {'loss': 1.373291015625e-05, 'norm': 0.00010287403711117804, 'learning_rate': 4.9000000000000005e-06}
+04/29/2024 01:47:03 - INFO - src.trainer_ours -   {'loss': 2.6702880859375e-06, 'norm': 0.0005212535616010427, 'learning_rate': 4.800000000000001e-06}
+04/29/2024 01:47:04 - INFO - src.trainer_ours -   {'loss': 4.57763671875e-06, 'norm': 0.004140779841691256, 'learning_rate': 4.7e-06}
+04/29/2024 01:47:05 - INFO - src.trainer_ours -   {'loss': 5.7220458984375e-06, 'norm': 0.00035417781327851117, 'learning_rate': 4.600000000000001e-06}
+04/29/2024 01:47:06 - INFO - src.trainer_ours -   {'loss': 4.1961669921875e-06, 'norm': 0.0004716624680440873, 'learning_rate': 4.5e-06}
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   {'loss': 3.4332275390625e-06, 'norm': 0.0001856406597653404, 'learning_rate': 4.4e-06}
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   {'loss': 6.103515625e-06, 'norm': 0.009413515217602253, 'learning_rate': 4.3e-06}
+04/29/2024 01:47:10 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-06, 'norm': 0.0005682434421032667, 'learning_rate': 4.2000000000000004e-06}
+04/29/2024 01:47:11 - INFO - src.trainer_ours -   {'loss': 5.340576171875e-06, 'norm': 0.008124250918626785, 'learning_rate': 4.1e-06}
+04/29/2024 01:47:12 - INFO - src.trainer_ours -   {'loss': 3.0517578125e-06, 'norm': 0.0003989041142631322, 'learning_rate': 4.000000000000001e-06}
+123it [00:51,  1.35it/s]127it [00:51,  1.74it/s]133it [00:51,  2.56it/s]138it [00:51,  3.47it/s]04/29/2024 01:47:12 - INFO - src.trainer_ours -   {'eval_loss': 1.0781675577163696, 'eval_acc': 0.8229166666666666}
+04/29/2024 01:47:13 - INFO - src.trainer_ours -   {'loss': 1.56402587890625e-05, 'norm': 0.001077292370609939, 'learning_rate': 3.900000000000001e-06}
+04/29/2024 01:47:14 - INFO - src.trainer_ours -   {'loss': 4.57763671875e-06, 'norm': 0.0007354840636253357, 'learning_rate': 3.8000000000000005e-06}
+04/29/2024 01:47:15 - INFO - src.trainer_ours -   {'loss': 1.02996826171875e-05, 'norm': 0.011921767145395279, 'learning_rate': 3.7e-06}
+04/29/2024 01:47:16 - INFO - src.trainer_ours -   {'loss': 2.288818359375e-06, 'norm': 0.009654674679040909, 'learning_rate': 3.6000000000000003e-06}
+04/29/2024 01:47:17 - INFO - src.trainer_ours -   {'loss': 9.1552734375e-06, 'norm': 0.027683768421411514, 'learning_rate': 3.5e-06}
+04/29/2024 01:47:18 - INFO - src.trainer_ours -   {'loss': 4.1961669921875e-06, 'norm': 0.001300127594731748, 'learning_rate': 3.4000000000000005e-06}
+04/29/2024 01:47:18 - INFO - src.trainer_ours -   {'loss': 4.3487548828125e-05, 'norm': 0.006346244364976883, 'learning_rate': 3.3000000000000006e-06}
+04/29/2024 01:47:19 - INFO - src.trainer_ours -   {'loss': 1.64031982421875e-05, 'norm': 0.12129141390323639, 'learning_rate': 3.2000000000000003e-06}
+04/29/2024 01:47:20 - INFO - src.trainer_ours -   {'loss': 8.58306884765625e-05, 'norm': 0.003124438226222992, 'learning_rate': 3.1000000000000004e-06}
+04/29/2024 01:47:21 - INFO - src.trainer_ours -   {'loss': 2.6702880859375e-06, 'norm': 0.002497185254469514, 'learning_rate': 3e-06}
+145it [01:00,  1.55it/s]155it [01:01,  2.66it/s]167it [01:01,  4.52it/s]04/29/2024 01:47:21 - INFO - src.trainer_ours -   {'eval_loss': 1.0535026788711548, 'eval_acc': 0.8333333333333334}
+04/29/2024 01:47:21 - INFO - src.trainer_ours -   Best dev result: 0.8333333333333334
+04/29/2024 01:47:23 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-06, 'norm': 0.0007472685538232327, 'learning_rate': 2.9e-06}
+04/29/2024 01:47:24 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-06, 'norm': 0.0019323801388964057, 'learning_rate': 2.8000000000000003e-06}
+04/29/2024 01:47:24 - INFO - src.trainer_ours -   {'loss': 2.288818359375e-06, 'norm': 0.00026650531799532473, 'learning_rate': 2.7000000000000004e-06}
+04/29/2024 01:47:25 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-06, 'norm': 0.0009530626703053713, 'learning_rate': 2.6e-06}
+04/29/2024 01:47:26 - INFO - src.trainer_ours -   {'loss': 2.6702880859375e-06, 'norm': 0.0001408461685059592, 'learning_rate': 2.5e-06}
+04/29/2024 01:47:27 - INFO - src.trainer_ours -   {'loss': 6.866455078125e-06, 'norm': 0.00040635751793161035, 'learning_rate': 2.4000000000000003e-06}
+04/29/2024 01:47:28 - INFO - src.trainer_ours -   {'loss': 2.6702880859375e-06, 'norm': 0.0033758217468857765, 'learning_rate': 2.3000000000000004e-06}
+04/29/2024 01:47:29 - INFO - src.trainer_ours -   {'loss': 6.866455078125e-06, 'norm': 0.00027376567595638335, 'learning_rate': 2.2e-06}
+04/29/2024 01:47:30 - INFO - src.trainer_ours -   {'loss': 4.9591064453125e-06, 'norm': 0.007115755695849657, 'learning_rate': 2.1000000000000002e-06}
+04/29/2024 01:47:31 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 0.00010357757855672389, 'learning_rate': 2.0000000000000003e-06}
+175it [01:11,  1.94it/s]186it [01:11,  2.99it/s]04/29/2024 01:47:31 - INFO - src.trainer_ours -   {'eval_loss': 1.0444564819335938, 'eval_acc': 0.8333333333333334}
+04/29/2024 01:47:32 - INFO - src.trainer_ours -   {'loss': 2.6702880859375e-06, 'norm': 6.532486440846696e-05, 'learning_rate': 1.9000000000000002e-06}
+04/29/2024 01:47:33 - INFO - src.trainer_ours -   {'loss': 6.866455078125e-06, 'norm': 0.0004162588738836348, 'learning_rate': 1.8000000000000001e-06}
+04/29/2024 01:47:34 - INFO - src.trainer_ours -   {'loss': 3.01361083984375e-05, 'norm': 0.00029186782194301486, 'learning_rate': 1.7000000000000002e-06}
+04/29/2024 01:47:35 - INFO - src.trainer_ours -   {'loss': 1.1444091796875e-06, 'norm': 9.460063301958144e-05, 'learning_rate': 1.6000000000000001e-06}
+04/29/2024 01:47:36 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-06, 'norm': 0.00018647244723979384, 'learning_rate': 1.5e-06}
+04/29/2024 01:47:37 - INFO - src.trainer_ours -   {'loss': 4.1961669921875e-06, 'norm': 0.0008925661095418036, 'learning_rate': 1.4000000000000001e-06}
+04/29/2024 01:47:38 - INFO - src.trainer_ours -   {'loss': 1.56402587890625e-05, 'norm': 0.0004937912453897297, 'learning_rate': 1.3e-06}
+04/29/2024 01:47:39 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 0.00035837184987030923, 'learning_rate': 1.2000000000000002e-06}
+04/29/2024 01:47:40 - INFO - src.trainer_ours -   {'loss': 1.10626220703125e-05, 'norm': 0.00758014852181077, 'learning_rate': 1.1e-06}
+04/29/2024 01:47:41 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 0.0026344682555645704, 'learning_rate': 1.0000000000000002e-06}
+194it [01:20,  1.77it/s]200it [01:20,  2.26it/s]211it [01:20,  3.56it/s]04/29/2024 01:47:41 - INFO - src.trainer_ours -   {'eval_loss': 1.04965078830719, 'eval_acc': 0.8125}
+04/29/2024 01:47:42 - INFO - src.trainer_ours -   {'loss': 3.0517578125e-06, 'norm': 3.814468072960153e-05, 'learning_rate': 9.000000000000001e-07}
+04/29/2024 01:47:43 - INFO - src.trainer_ours -   {'loss': 2.288818359375e-06, 'norm': 0.008390328846871853, 'learning_rate': 8.000000000000001e-07}
+04/29/2024 01:47:44 - INFO - src.trainer_ours -   {'loss': 3.4332275390625e-06, 'norm': 0.0004209824255667627, 'learning_rate': 7.000000000000001e-07}
+04/29/2024 01:47:45 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-06, 'norm': 4.151402390561998e-05, 'learning_rate': 6.000000000000001e-07}
+04/29/2024 01:47:45 - INFO - src.trainer_ours -   {'loss': 4.9591064453125e-06, 'norm': 0.020245179533958435, 'learning_rate': 5.000000000000001e-07}
+04/29/2024 01:47:46 - INFO - src.trainer_ours -   {'loss': 1.1444091796875e-06, 'norm': 0.0012767977314069867, 'learning_rate': 4.0000000000000003e-07}
+04/29/2024 01:47:47 - INFO - src.trainer_ours -   {'loss': 1.94549560546875e-05, 'norm': 0.0028148421552032232, 'learning_rate': 3.0000000000000004e-07}
+04/29/2024 01:47:48 - INFO - src.trainer_ours -   {'loss': 3.0517578125e-06, 'norm': 0.0038291418459266424, 'learning_rate': 2.0000000000000002e-07}
+04/29/2024 01:47:49 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 6.901607412146404e-05, 'learning_rate': 1.0000000000000001e-07}
+04/29/2024 01:47:50 - INFO - src.trainer_ours -   {'loss': 2.32696533203125e-05, 'norm': 0.019340194761753082, 'learning_rate': 0.0}
+218it [01:29,  1.90it/s]226it [01:29,  2.66it/s]234it [01:29,  3.71it/s]04/29/2024 01:47:50 - INFO - src.trainer_ours -   {'eval_loss': 1.0515168905258179, 'eval_acc': 0.8229166666666666}
+04/29/2024 01:47:50 - INFO - src.trainer_ours -   
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+04/29/2024 01:47:51 - INFO - __main__ -   *** Validate ***
+241it [01:30,  4.41it/s]252it [01:30,  6.89it/s]264it [01:30, 10.55it/s]04/29/2024 01:47:51 - INFO - src.trainer_ours -   {'eval_loss': 1.0535026788711548, 'eval_acc': 0.8333333333333334}
+04/29/2024 01:47:51 - INFO - __main__ -   ***** Eval results trec *****
+04/29/2024 01:47:51 - INFO - __main__ -     eval_loss = 1.0535026788711548
+04/29/2024 01:47:51 - INFO - __main__ -     eval_acc = 0.8333333333333334
+04/29/2024 01:47:51 - INFO - root -   *** Test ***
+273it [01:30, 14.02it/s]284it [01:31, 19.72it/s]293it [01:31, 25.12it/s]304it [01:31, 33.47it/s]314it [01:31, 41.06it/s]324it [01:31, 48.50it/s]334it [01:31, 56.31it/s]343it [01:31, 59.13it/s]352it [01:31, 63.90it/s]361it [01:32, 66.07it/s]370it [01:32, 71.33it/s]379it [01:32, 70.27it/s]387it [01:32, 71.69it/s]04/29/2024 01:47:52 - INFO - src.trainer_ours -   {'eval_loss': 1.279069423675537, 'eval_acc': 0.752}
+04/29/2024 01:47:52 - INFO - __main__ -   ***** Test results trec *****
+04/29/2024 01:47:52 - INFO - __main__ -     eval_loss = 1.279069423675537
+04/29/2024 01:47:52 - INFO - __main__ -     eval_acc = 0.752
+04/29/2024 01:47:52 - INFO - __main__ -   ****** Output Dir *******
+04/29/2024 01:47:52 - INFO - __main__ -   result/trec-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42
+389it [01:32,  4.21it/s]

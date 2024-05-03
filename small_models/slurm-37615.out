@@ -1,0 +1,531 @@
+/var/spool/slurmd/job37615/slurm_script: 4: [: 1: unexpected operator
+
+Ubuntu 22.04.3 LTS5.15.0-86-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab6.cs          IP No:     128.6.13.26 2620:0:d60:ac0d::1a
+Mon Apr 29 01:45:31 AM EDT 2024	  Uptime:        	      108 days 08:07
+----------------------------------------------------------------------------
+Processes:     	922               Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	0/0/0
+Connections:   	27                Load/Total Users:	68/0
+Free Memory:   	792Gi of 1.0Ti    Free Swap:     	499Gi of 499Gi
+----------------------------------------------------------------------------
+CPU Info:      	Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz - 80 cores 
+System CPU:    	0.92%             User CPU:      	78.07%
+CPU Idle:      	21.01%            IO Wait:       	0.00%
+----------------------------------------------------------------------------
+Login as:      	zl606             No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	4433.85 GB
+CUDA Driver:   	11.8              CUDA Cores:    	3072
+----------------------------------------------------------------------------
+
+13:4: not a valid test operator: (
+13:4: not a valid test operator: 525.125.06
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 23.12 (build 76438008)
+PyTorch Version 2.2.0a0+81ea7a4
+
+Container image Copyright (c) 2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+Copyright (c) 2014-2023 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 12.3 driver version 545.23.08 with kernel driver version 525.125.06.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+TASK: QQP
+K: 16
+Seed: 42
+BS: 8
+LR: 1e-5
+Step: 1000; Eval step: 100
+Grid search tag: seed42-bs8-lr1e-5-step1000-evalstep100
+Tag: k16-roberta-base-ft
+04/29/2024 01:45:41 - WARNING - __main__ -   Process rank: -1, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+04/29/2024 01:45:41 - INFO - __main__ -   Training/evaluation parameters DynamicTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+adjust_for_init=False,
+array_id=-1,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+binary_classification=False,
+change_grad_estimate=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+efficient_zero_order=False,
+efficient_zero_order_fp16=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=100,
+evaluate_during_training=True,
+evaluation_strategy=no,
+exclude_embeddings=False,
+exclude_first_layers=-1,
+exclude_head=False,
+f0_scaling=1.0,
+fix_layers=0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+from_linearhead=False,
+fsdp=[],
+fsdp_config={'fsdp_min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+head_tuning=False,
+hf_inference_model=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+jit_mode_eval=False,
+kernel_formula=sgd,
+kernel_gamma=1.0,
+kernel_regularization=0.0,
+kernel_solver=logistic,
+label_names=None,
+label_smoothing_factor=0.0,
+layer_wise_optim=False,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+load_kernels=None,
+local_rank=-1,
+log_file=log,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=result/QQP-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42/runs/Apr29_01-45-41_rlab6.cs.rutgers.edu,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lp_early_stopping=False,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=1000,
+max_zo_forward_steps=0,
+mc_tol=0.1,
+metric_for_best_model=None,
+model_id=-1,
+mp_parameters=,
+no_cuda=False,
+no_predict=False,
+no_reparam=False,
+no_train=False,
+norm_running_update=False,
+num_hvp_vecs=128,
+num_prefix=10,
+num_train_epochs=3.0,
+only_biases=False,
+optim=adamw_hf,
+optim_args=None,
+optimize_acc=False,
+optimizer=adam,
+optimizer_variant=,
+output_dir=result/QQP-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42,
+overwrite_kernels=False,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=4,
+per_device_train_batch_size=8,
+prediction_loss_only=False,
+prefix_init_by_real_act=False,
+prefix_tuning=False,
+prob_as_feature=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+random_model_init=False,
+ray_scope=last,
+recompute_norms=False,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=result/QQP-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42,
+save_at_last=False,
+save_logit=False,
+save_logit_dir=None,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+scale_lr_with_samples=False,
+scale_norm_by_num_params=False,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sweep=False,
+sync_embedding_layers=False,
+tf32=None,
+tie_emb=False,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trainer=standard,
+untie_emb=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+use_zo_grad_est=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+zero_order_clip_grad=False,
+zero_order_eps=0.001,
+zero_order_optim=False,
+zero_order_sample=1,
+zero_order_sample_scheduler=None,
+zero_order_use_trainer_optim=False,
+zo_by_layer=False,
+zo_variant=None,
+)
+04/29/2024 01:45:41 - INFO - __main__ -   Task name: qqp, number of labels: 2, output mode: classification
+04/29/2024 01:45:42 - WARNING - src.models -   By default for RoBERTa models the input embeddings and the output embeddings are NOT tied!!!!
+Some weights of RobertaModelForPromptFinetuning were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier.bias', 'roberta.embeddings.position_ids', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+04/29/2024 01:45:44 - INFO - src.dataset -   Label 0 to word ĠNo (440)
+04/29/2024 01:45:44 - INFO - src.dataset -   Label 1 to word ĠYes (3216)
+04/29/2024 01:45:44 - INFO - src.dataset -   Total num_sample for mode train: 1
+04/29/2024 01:45:44 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:44 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:44 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/QQP/16-42/cached_train_RobertaTokenizerFast-roberta_128_qqp [took 0.002 s]
+04/29/2024 01:45:44 - INFO - src.dataset -   Label 0 to word ĠNo (440)
+04/29/2024 01:45:44 - INFO - src.dataset -   Label 1 to word ĠYes (3216)
+04/29/2024 01:45:44 - INFO - src.dataset -   Total num_sample for mode dev: 1
+04/29/2024 01:45:44 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:44 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:44 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/QQP/16-42/cached_dev_RobertaTokenizerFast-roberta_128_qqp [took 0.002 s]
+04/29/2024 01:45:44 - INFO - src.dataset -   *** Example ***
+04/29/2024 01:45:44 - INFO - src.dataset -   guid: dev-44685
+04/29/2024 01:45:44 - INFO - src.dataset -   features: OurInputFeatures(input_ids=[0, 17781, 47, 1317, 59, 5, 6599, 14062, 154, 826, 66, 9, 20089, 6, 2605, 116, 50264, 6, 99, 32, 5, 205, 383, 59, 6599, 14062, 154, 826, 66, 9, 20089, 6, 2605, 116, 2], attention_mask=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], token_type_ids=None, label=1, mask_pos=[16], label_word_list=None, sfc_input_ids=None, sfc_attention_mask=None, sfc_mask_pos=None)
+04/29/2024 01:45:44 - INFO - src.dataset -   text: <s>Have you heard about the Delta Charting Group out of Tucson, Arizona?<mask>, what are the good things about Delta Charting Group out of Tucson, Arizona?</s>
+04/29/2024 01:45:45 - INFO - src.dataset -   Label 0 to word ĠNo (440)
+04/29/2024 01:45:45 - INFO - src.dataset -   Label 1 to word ĠYes (3216)
+04/29/2024 01:45:45 - INFO - src.dataset -   Total num_sample for mode test: 1
+04/29/2024 01:45:45 - INFO - src.dataset -   Creating/loading examples from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:45 - INFO - src.dataset -   Creating features from dataset file at data/k-shot-1k-test/QQP/16-42
+04/29/2024 01:45:45 - INFO - src.dataset -   Saving features into cached file data/k-shot-1k-test/QQP/16-42/cached_test_RobertaTokenizerFast-roberta_128_qqp [took 0.013 s]
+04/29/2024 01:45:45 - INFO - src.dataset -   *** Example ***
+04/29/2024 01:45:45 - INFO - src.dataset -   guid: test-348322
+04/29/2024 01:45:45 - INFO - src.dataset -   features: OurInputFeatures(input_ids=[0, 2264, 16763, 74, 33, 156, 47, 2200, 21453, 11, 8178, 8947, 116, 50264, 6, 141, 38, 7777, 384, 5756, 18854, 2444, 6972, 975, 3842, 30314, 2444, 3779, 13675, 13784, 6015, 83, 7136, 1723, 21770, 116, 2], attention_mask=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], token_type_ids=None, label=0, mask_pos=[13], label_word_list=None, sfc_input_ids=None, sfc_attention_mask=None, sfc_mask_pos=None)
+04/29/2024 01:45:45 - INFO - src.dataset -   text: <s>What attributes would have made you highly desirable in ancient Rome?<mask>, how I GET OPPERTINUTY TO JOIN IT COMPANY AS A FRESHER?</s>
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+04/29/2024 01:45:47 - INFO - src.trainer_ours -   ***** Running training *****
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Num examples = 32
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Num Epochs = 250
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Instantaneous batch size per device = 8
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Total train batch size (w. parallel, distributed & accumulation) = 8
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Gradient Accumulation steps = 1
+04/29/2024 01:45:47 - INFO - src.trainer_ours -     Total optimization steps = 1000
+You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+04/29/2024 01:45:50 - INFO - src.trainer_ours -   {'loss': 0.6633012294769287, 'norm': 36.92727279663086, 'learning_rate': 9.9e-06}
+04/29/2024 01:45:50 - INFO - src.trainer_ours -   {'loss': 0.20507874488830566, 'norm': 30.175880432128906, 'learning_rate': 9.800000000000001e-06}
+04/29/2024 01:45:51 - INFO - src.trainer_ours -   {'loss': 0.017660236358642577, 'norm': 0.5701823234558105, 'learning_rate': 9.7e-06}
+04/29/2024 01:45:52 - INFO - src.trainer_ours -   {'loss': 0.0011296272277832031, 'norm': 0.04794679209589958, 'learning_rate': 9.600000000000001e-06}
+04/29/2024 01:45:53 - INFO - src.trainer_ours -   {'loss': 9.6893310546875e-05, 'norm': 0.03927481174468994, 'learning_rate': 9.5e-06}
+04/29/2024 01:45:53 - INFO - src.trainer_ours -   {'loss': 9.441375732421875e-06, 'norm': 0.0008334270678460598, 'learning_rate': 9.4e-06}
+04/29/2024 01:45:54 - INFO - src.trainer_ours -   {'loss': 1.7070770263671874e-05, 'norm': 0.0007523205131292343, 'learning_rate': 9.3e-06}
+04/29/2024 01:45:55 - INFO - src.trainer_ours -   {'loss': 2.384185791015625e-06, 'norm': 0.0012463446473702788, 'learning_rate': 9.200000000000002e-06}
+04/29/2024 01:45:56 - INFO - src.trainer_ours -   {'loss': 6.67572021484375e-07, 'norm': 0.000187314857612364, 'learning_rate': 9.100000000000001e-06}
+04/29/2024 01:45:56 - INFO - src.trainer_ours -   {'loss': 2.288818359375e-06, 'norm': 0.00041112967301160097, 'learning_rate': 9e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+RobertaConfig {
+  "_name_or_path": "roberta-base",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "finetuning_task": "qqp",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.28.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+  0%|          | 0/8 [00:00<?, ?it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:45:57 - INFO - src.trainer_ours -   {'eval_loss': 3.3948912620544434, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:45:57 - INFO - src.trainer_ours -   Best dev result: 0.6470588235294118
+04/29/2024 01:45:58 - INFO - src.trainer_ours -   {'loss': 1.71661376953125e-06, 'norm': 0.00028072195709683, 'learning_rate': 8.900000000000001e-06}
+04/29/2024 01:45:59 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 4.065376924700104e-05, 'learning_rate': 8.8e-06}
+04/29/2024 01:46:00 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 0.004364345222711563, 'learning_rate': 8.700000000000001e-06}
+04/29/2024 01:46:00 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 0.00017576210666447878, 'learning_rate': 8.6e-06}
+04/29/2024 01:46:01 - INFO - src.trainer_ours -   {'loss': 1.049041748046875e-06, 'norm': 0.0004576401843223721, 'learning_rate': 8.5e-06}
+04/29/2024 01:46:02 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.00011413606262067333, 'learning_rate': 8.400000000000001e-06}
+04/29/2024 01:46:03 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.001994847087189555, 'learning_rate': 8.3e-06}
+04/29/2024 01:46:04 - INFO - src.trainer_ours -   {'loss': 1.430511474609375e-06, 'norm': 0.00010047387331724167, 'learning_rate': 8.2e-06}
+04/29/2024 01:46:04 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 1.7561495042173192e-05, 'learning_rate': 8.1e-06}
+04/29/2024 01:46:05 - INFO - src.trainer_ours -   {'loss': 5.7220458984375e-07, 'norm': 0.00011384188837837428, 'learning_rate': 8.000000000000001e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+9it [00:08,  1.05it/s]               /common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:05 - INFO - src.trainer_ours -   {'eval_loss': 3.451735258102417, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:06 - INFO - src.trainer_ours -   {'loss': 5.7220458984375e-07, 'norm': 0.0005773450247943401, 'learning_rate': 7.9e-06}
+04/29/2024 01:46:07 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 1.3265982488519512e-05, 'learning_rate': 7.800000000000002e-06}
+04/29/2024 01:46:07 - INFO - src.trainer_ours -   {'loss': 8.58306884765625e-07, 'norm': 0.00023392291041091084, 'learning_rate': 7.7e-06}
+04/29/2024 01:46:08 - INFO - src.trainer_ours -   {'loss': 6.67572021484375e-07, 'norm': 2.7457557735033333e-05, 'learning_rate': 7.600000000000001e-06}
+04/29/2024 01:46:09 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 0.00011065344006055966, 'learning_rate': 7.500000000000001e-06}
+04/29/2024 01:46:10 - INFO - src.trainer_ours -   {'loss': 2.002716064453125e-06, 'norm': 0.0005777753540314734, 'learning_rate': 7.4e-06}
+04/29/2024 01:46:10 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 1.6780924852355383e-05, 'learning_rate': 7.3e-06}
+04/29/2024 01:46:11 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.00019077629258390516, 'learning_rate': 7.2000000000000005e-06}
+04/29/2024 01:46:12 - INFO - src.trainer_ours -   {'loss': 6.67572021484375e-07, 'norm': 0.0005728766554966569, 'learning_rate': 7.100000000000001e-06}
+04/29/2024 01:46:13 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 5.850787056260742e-05, 'learning_rate': 7e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+17it [00:16,  1.04it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:13 - INFO - src.trainer_ours -   {'eval_loss': 3.4755711555480957, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:14 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 0.00026013093884103, 'learning_rate': 6.9e-06}
+04/29/2024 01:46:14 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 2.3911514290375635e-05, 'learning_rate': 6.800000000000001e-06}
+04/29/2024 01:46:15 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 0.00016908679390326142, 'learning_rate': 6.700000000000001e-06}
+04/29/2024 01:46:16 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 8.398893260164186e-05, 'learning_rate': 6.600000000000001e-06}
+04/29/2024 01:46:17 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.00015556089056190103, 'learning_rate': 6.5000000000000004e-06}
+04/29/2024 01:46:17 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 0.0005711730918847024, 'learning_rate': 6.4000000000000006e-06}
+04/29/2024 01:46:18 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 0.00033140755840577185, 'learning_rate': 6.300000000000001e-06}
+04/29/2024 01:46:19 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-06, 'norm': 5.2895902626914904e-05, 'learning_rate': 6.200000000000001e-06}
+04/29/2024 01:46:20 - INFO - src.trainer_ours -   {'loss': 7.62939453125e-07, 'norm': 3.608583574532531e-05, 'learning_rate': 6.1e-06}
+04/29/2024 01:46:20 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.0004902348737232387, 'learning_rate': 6e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+25it [00:24,  1.04it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:21 - INFO - src.trainer_ours -   {'eval_loss': 3.5232596397399902, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:21 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 3.0290193535620347e-05, 'learning_rate': 5.9e-06}
+04/29/2024 01:46:22 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 8.167602209141478e-05, 'learning_rate': 5.8e-06}
+04/29/2024 01:46:23 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.0002258564200019464, 'learning_rate': 5.7e-06}
+04/29/2024 01:46:24 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-06, 'norm': 8.212340617319569e-05, 'learning_rate': 5.600000000000001e-06}
+04/29/2024 01:46:25 - INFO - src.trainer_ours -   {'loss': 8.58306884765625e-07, 'norm': 0.003963754512369633, 'learning_rate': 5.500000000000001e-06}
+04/29/2024 01:46:25 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.0005228001391515136, 'learning_rate': 5.400000000000001e-06}
+04/29/2024 01:46:26 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 7.242708670673892e-05, 'learning_rate': 5.300000000000001e-06}
+04/29/2024 01:46:27 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.00023712485563009977, 'learning_rate': 5.2e-06}
+04/29/2024 01:46:28 - INFO - src.trainer_ours -   {'loss': 1.52587890625e-06, 'norm': 2.3771463020239025e-05, 'learning_rate': 5.1e-06}
+04/29/2024 01:46:28 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 6.895235856063664e-05, 'learning_rate': 5e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+33it [00:31,  1.03it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:29 - INFO - src.trainer_ours -   {'eval_loss': 3.53945255279541, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:29 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 0.0002435726928524673, 'learning_rate': 4.9000000000000005e-06}
+04/29/2024 01:46:30 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 2.675626819836907e-05, 'learning_rate': 4.800000000000001e-06}
+04/29/2024 01:46:31 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.0003349792677909136, 'learning_rate': 4.7e-06}
+04/29/2024 01:46:32 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 5.979850175208412e-05, 'learning_rate': 4.600000000000001e-06}
+04/29/2024 01:46:32 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 4.808306766790338e-05, 'learning_rate': 4.5e-06}
+04/29/2024 01:46:33 - INFO - src.trainer_ours -   {'loss': 1.33514404296875e-06, 'norm': 9.749644959811121e-05, 'learning_rate': 4.4e-06}
+04/29/2024 01:46:34 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 1.7380740246153437e-05, 'learning_rate': 4.3e-06}
+04/29/2024 01:46:35 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.0001070899743353948, 'learning_rate': 4.2000000000000004e-06}
+04/29/2024 01:46:36 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 1.6833939298521727e-05, 'learning_rate': 4.1e-06}
+04/29/2024 01:46:36 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 0.00010748808563221246, 'learning_rate': 4.000000000000001e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+41it [00:39,  1.02it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:36 - INFO - src.trainer_ours -   {'eval_loss': 3.552719831466675, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:37 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 3.0352968678926118e-05, 'learning_rate': 3.900000000000001e-06}
+04/29/2024 01:46:38 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 1.9768191123148426e-05, 'learning_rate': 3.8000000000000005e-06}
+04/29/2024 01:46:39 - INFO - src.trainer_ours -   {'loss': 4.76837158203125e-07, 'norm': 3.523433406371623e-05, 'learning_rate': 3.7e-06}
+04/29/2024 01:46:40 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 0.0011281248880550265, 'learning_rate': 3.6000000000000003e-06}
+04/29/2024 01:46:40 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.00020179522107355297, 'learning_rate': 3.5e-06}
+04/29/2024 01:46:41 - INFO - src.trainer_ours -   {'loss': 4.482269287109375e-06, 'norm': 0.00015021825674921274, 'learning_rate': 3.4000000000000005e-06}
+04/29/2024 01:46:42 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 1.5592106137773953e-05, 'learning_rate': 3.3000000000000006e-06}
+04/29/2024 01:46:43 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.00011461713438620791, 'learning_rate': 3.2000000000000003e-06}
+04/29/2024 01:46:43 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-06, 'norm': 8.082583372015506e-05, 'learning_rate': 3.1000000000000004e-06}
+04/29/2024 01:46:44 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 4.863912909058854e-05, 'learning_rate': 3e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+49it [00:47,  1.02it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:44 - INFO - src.trainer_ours -   {'eval_loss': 3.6273953914642334, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:45 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 0.00123994005843997, 'learning_rate': 2.9e-06}
+04/29/2024 01:46:46 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 2.9527078368118964e-05, 'learning_rate': 2.8000000000000003e-06}
+04/29/2024 01:46:47 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 2.4154347556759603e-05, 'learning_rate': 2.7000000000000004e-06}
+04/29/2024 01:46:47 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 5.89246628805995e-05, 'learning_rate': 2.6e-06}
+04/29/2024 01:46:48 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.00030932278605178, 'learning_rate': 2.5e-06}
+04/29/2024 01:46:49 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.00012735388008877635, 'learning_rate': 2.4000000000000003e-06}
+04/29/2024 01:46:50 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.0003371979109942913, 'learning_rate': 2.3000000000000004e-06}
+04/29/2024 01:46:50 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.00022963943774811924, 'learning_rate': 2.2e-06}
+04/29/2024 01:46:51 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 9.92355853668414e-05, 'learning_rate': 2.1000000000000002e-06}
+04/29/2024 01:46:52 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 5.3737370762974024e-05, 'learning_rate': 2.0000000000000003e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+57it [00:55,  1.03it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:46:52 - INFO - src.trainer_ours -   {'eval_loss': 3.625067710876465, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:46:53 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 8.859633089741692e-05, 'learning_rate': 1.9000000000000002e-06}
+04/29/2024 01:46:54 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 8.496232476318255e-05, 'learning_rate': 1.8000000000000001e-06}
+04/29/2024 01:46:54 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 4.18659983552061e-05, 'learning_rate': 1.7000000000000002e-06}
+04/29/2024 01:46:55 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 5.933543070568703e-05, 'learning_rate': 1.6000000000000001e-06}
+04/29/2024 01:46:56 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.0001706983894109726, 'learning_rate': 1.5e-06}
+04/29/2024 01:46:57 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 1.7199990907101892e-05, 'learning_rate': 1.4000000000000001e-06}
+04/29/2024 01:46:57 - INFO - src.trainer_ours -   {'loss': 2.765655517578125e-06, 'norm': 5.492851050803438e-05, 'learning_rate': 1.3e-06}
+04/29/2024 01:46:58 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.00010053010919364169, 'learning_rate': 1.2000000000000002e-06}
+04/29/2024 01:46:59 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 4.111949965590611e-05, 'learning_rate': 1.1e-06}
+04/29/2024 01:47:00 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 1.9563762180041522e-05, 'learning_rate': 1.0000000000000002e-06}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+65it [01:03,  1.03it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:47:00 - INFO - src.trainer_ours -   {'eval_loss': 3.617943048477173, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:47:01 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 8.027686271816492e-05, 'learning_rate': 9.000000000000001e-07}
+04/29/2024 01:47:01 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.0003744746500160545, 'learning_rate': 8.000000000000001e-07}
+04/29/2024 01:47:02 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.00033066849573515356, 'learning_rate': 7.000000000000001e-07}
+04/29/2024 01:47:03 - INFO - src.trainer_ours -   {'loss': 0.0, 'norm': 7.637697854079306e-05, 'learning_rate': 6.000000000000001e-07}
+04/29/2024 01:47:04 - INFO - src.trainer_ours -   {'loss': 3.814697265625e-07, 'norm': 0.008761333301663399, 'learning_rate': 5.000000000000001e-07}
+04/29/2024 01:47:04 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 6.800219853175804e-05, 'learning_rate': 4.0000000000000003e-07}
+04/29/2024 01:47:05 - INFO - src.trainer_ours -   {'loss': 1.9073486328125e-07, 'norm': 0.0007348893559537828, 'learning_rate': 3.0000000000000004e-07}
+04/29/2024 01:47:06 - INFO - src.trainer_ours -   {'loss': 9.5367431640625e-08, 'norm': 0.00010466954699950293, 'learning_rate': 2.0000000000000002e-07}
+04/29/2024 01:47:07 - INFO - src.trainer_ours -   {'loss': 6.67572021484375e-07, 'norm': 4.2217146983603016e-05, 'learning_rate': 1.0000000000000001e-07}
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   {'loss': 2.86102294921875e-07, 'norm': 3.620183633756824e-05, 'learning_rate': 0.0}
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+73it [01:11,  1.02it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   {'eval_loss': 3.6198740005493164, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+04/29/2024 01:47:08 - INFO - __main__ -   *** Validate ***
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+81it [01:11,  1.42it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:47:08 - INFO - src.trainer_ours -   {'eval_loss': 3.3948912620544434, 'eval_acc': 0.625, 'eval_f1': 0.6470588235294118, 'eval_acc_and_f1': 0.6360294117647058}
+04/29/2024 01:47:08 - INFO - __main__ -   ***** Eval results qqp *****
+04/29/2024 01:47:08 - INFO - __main__ -     eval_loss = 3.3948912620544434
+04/29/2024 01:47:08 - INFO - __main__ -     eval_acc = 0.625
+04/29/2024 01:47:08 - INFO - __main__ -     eval_f1 = 0.6470588235294118
+04/29/2024 01:47:08 - INFO - __main__ -     eval_acc_and_f1 = 0.6360294117647058
+04/29/2024 01:47:08 - INFO - root -   *** Test ***
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/trainer_pt_utils.py:411: FutureWarning: DistributedTensorGatherer is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+89it [01:11,  2.03it/s]98it [01:12,  3.00it/s]107it [01:12,  4.33it/s]116it [01:12,  6.17it/s]126it [01:12,  8.95it/s]137it [01:12, 13.03it/s]146it [01:12, 17.20it/s]156it [01:12, 23.10it/s]167it [01:12, 31.04it/s]177it [01:12, 38.14it/s]187it [01:13, 46.30it/s]196it [01:13, 52.92it/s]206it [01:13, 60.94it/s]217it [01:13, 70.60it/s]227it [01:13, 75.20it/s]237it [01:13, 79.43it/s]248it [01:13, 86.56it/s]258it [01:13, 86.53it/s]268it [01:13, 86.68it/s]278it [01:14, 85.96it/s]287it [01:14, 86.88it/s]298it [01:14, 90.80it/s]308it [01:14, 88.37it/s]317it [01:14, 88.04it/s]328it [01:14, 91.71it/s]338it [01:14, 92.87it/s]/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:61: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:37: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+/common/home/zl606/.local/lib/python3.10/site-packages/transformers/data/metrics/__init__.py:31: FutureWarning: This metric will be removed from the library soon, metrics should be handled with the 🤗 Evaluate library. You can have a look at this example script for pointers: https://github.com/huggingface/transformers/blob/main/examples/pytorch/text-classification/run_glue.py
+  warnings.warn(DEPRECATION_WARNING, FutureWarning)
+04/29/2024 01:47:11 - INFO - src.trainer_ours -   {'eval_loss': 2.9930319786071777, 'eval_acc': 0.658, 'eval_f1': 0.6586826347305389, 'eval_acc_and_f1': 0.6583413173652695}
+04/29/2024 01:47:11 - INFO - __main__ -   ***** Test results qqp *****
+04/29/2024 01:47:11 - INFO - __main__ -     eval_loss = 2.9930319786071777
+04/29/2024 01:47:11 - INFO - __main__ -     eval_acc = 0.658
+04/29/2024 01:47:11 - INFO - __main__ -     eval_f1 = 0.6586826347305389
+04/29/2024 01:47:11 - INFO - __main__ -     eval_acc_and_f1 = 0.6583413173652695
+04/29/2024 01:47:11 - INFO - __main__ -   ****** Output Dir *******
+04/29/2024 01:47:11 - INFO - __main__ -   result/QQP-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42
+338it [01:14,  4.53it/s]

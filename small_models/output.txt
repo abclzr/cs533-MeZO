@@ -1,0 +1,12 @@
+04/27/2024 00:52:12 - INFO - __main__ -   ***** Test results sst-2 *****
+04/27/2024 00:52:12 - INFO - __main__ -     eval_loss = 1.1648989915847778
+04/27/2024 00:52:12 - INFO - __main__ -     eval_acc = 0.8956422018348624
+04/27/2024 00:52:12 - INFO - __main__ -   ****** Output Dir *******
+04/27/2024 00:52:12 - INFO - __main__ -   result/SST-2-roberta-base-prompt-standard-k16-roberta-base-ftseed42-bs8-lr1e-5-step1000-evalstep100/16-42
+
+04/27/2024 20:26:44 - INFO - __main__ -   ***** Test results sst-2 *****
+04/27/2024 20:26:44 - INFO - __main__ -     eval_loss = 0.5113733410835266
+04/27/2024 20:26:44 - INFO - __main__ -     eval_acc = 0.8841743119266054
+04/27/2024 20:26:44 - INFO - __main__ -   ****** Output Dir *******
+04/27/2024 20:26:44 - INFO - __main__ -   result/SST-2-roberta-base-prompt-standard-k16-roberta-base-mezo-ftseed42-bs64-lr1e-6-eps1e-3-wd0-step100000-evalstep10000/16-42
+
